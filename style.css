@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Josefin+Sans:400,600i,700,700i');
+/* reseting defualt css */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/*header style*/
+header{
+    width: 100%;
+    height: 200px;
+    background: rgb(229, 130, 130);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.header-area{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: rgb(229, 130, 130);
+}
+
+
+.main-menu{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex-basis:600px;
+}
+
+.main-menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #000;
+}
+
+.logo{
+    flex-basis:200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .title{
+   text-align: center;
+   font-family: 'Josefin Sans',sans-serif;
+   font-size: 30px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-title{
+    max-width: 600px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.header-title h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Gamja Flower',cursive;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+
+/* container style */
+.container{
+    max-width: 1200px;
+    height: auto;
+    background: #fff;
+    margin: 0px auto; 
+}
+
+/* food-container */
+.food-menu{
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    grid-auto-rows: minmax(450px,auto);
+    grid-gap: 15px;
+}
+
+.food-container{
+   background: #ccc;
+   border: 1px solid #000;
+   border-radius: 10px;
+   transform: translateY(200px);
+   transition: all 0.3s ease-in-out;
+   opacity: 0;
+}
+
+.food-container .Price-tag{
+   text-decoration: none;
+   font-family: 'Gamja Flower', cursive;
+   font-size: 25px;
+   background: rgb(133,38,210);
+   background: linear-gradient(90deg, rgba(133,38,210,1) 38%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+   padding: 5px 20px;
+   color: #fff;
+   border-radius: 5px;
+   text-align: center;
+   margin-left: 20px;
+   display: inline-block;
+   margin-bottom: 20px;
+   opacity: 1;
+}
+
+.food-container h2{
+    margin:30px 0 30px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* image style */
+#food-img{
+  margin: 10px auto;
+  max-width:280px;
+  height: 300px; 
+}
+
+#food-img img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 10px 8px rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+
+/*Button Styles */
+.Buy{
+    font-family: 'Gamja Flower', cursive;
+    font-size: 25px;
+    background: rgb(26,108,208);
+    background: linear-gradient(90deg, rgba(26,108,208,1) 0%, rgba(20,218,199,1) 0%, rgba(1,54,131,1) 50%, rgba(0,212,255,1) 96%);
+    padding: 3px 20px;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: none;
+    opacity: 0;
+    transition:all 0.4s ease-in-out;
+}
+
+.Buy:hover{
+    cursor: pointer;
+    box-shadow: 2px 5px 6px rgba(0,0,0,0.5);  
+}
