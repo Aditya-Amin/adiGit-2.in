@@ -9,8 +9,39 @@ let a = document.getElementsByClassName("Price-tag");
 let header = document.getElementsByTagName("header")[0];
 let logo = document.getElementsByClassName("logo")[0];
 let headerArea = document.getElementsByClassName("header-area")[0];
+let mainMenu = document.getElementsByClassName("main-menu")[0];
+let icon = document.getElementById("hamburgger-icon");
+let span = document.querySelectorAll(".icon");
+var bool = false;
 
+icon.addEventListener("click",toggle);
 
+function toggle(){
+    if(bool === false){
+        mainMenu.style.opacity = "0.7";
+        span[0].style.transform = "rotateZ(45deg)";
+        span[0].style.transformOrigin = "0% 200%";
+        span[0].style.transition = "0.5s";
+        span[1].style.transform = "translateX(-80px)";
+        span[1].style.opacity = "0";
+        span[1].style.transition = "0.5s";
+        span[2].style.transform = "rotateZ(-45deg)";
+        span[2].style.transition = "0.5s";
+        bool = true;
+   }
+   else if(bool === true){
+    mainMenu.style.opacity = "0";
+    span[0].style.transform = "rotateZ(0deg)";
+    span[0].style.transformOrigin = "0% 0%";
+    span[0].style.transition = "0.5s";
+    span[1].style.transform = "translateX(0px)";
+    span[1].style.opacity = "1";
+    span[1].style.transition = "0.5s";
+    span[2].style.transform = "rotateZ(0deg)";
+    span[2].style.transition = "0.5s";
+    bool = false;  
+  } 
+}
 
 for(let i=0; i<item.length; i++){
     item[i].addEventListener("mouseover",function(){
